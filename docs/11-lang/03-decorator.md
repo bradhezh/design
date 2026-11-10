@@ -297,7 +297,7 @@ glib-compile-resources resources.xml --target=build/resources.c --generate-sourc
 gcc -Iinc `pkg-config --cflags gtk4` -o build/demo `find src -type f -name '*.c'` build/resources.c `pkg-config --libs gtk4`
 ```
 
-```c title="main.c"
+```c title="src/main.c"
 #include <gtk/gtk.h>
 
 #include "controllers/main.h"
@@ -315,7 +315,7 @@ int main(int argc, char *argv[]) {
 }
 ```
 
-```c title="controllers/main.c"
+```c title="src/controllers/main.c"
 #include <gtk/gtk.h>
 
 #include "controllers/main.h"
